@@ -1,0 +1,47 @@
+<div class="layout">
+
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <!--<header class="top-bar">
+    <h5 class="sidebar-title">{{ username }}</h5>
+    <button class="btn btn-outline-danger btn-sm" (click)="logout()">Logout</button>
+    </header>-->
+
+<div class="sidebar-profile">
+  <div class="profile-info">
+    <div class="avatar">
+      {{ username.charAt(0) }}
+    </div>
+
+    <div class="user-details">
+      <h6 class="username">{{ username }}</h6>
+      <small class="role">User</small>
+    </div>
+  </div>
+
+  <button class="btn btn-logout" (click)="logout()">
+    <i class="bi bi-box-arrow-right"></i> Logout
+  </button>
+</div>
+
+
+    <nav>
+      <a routerLink="/dashboard" routerLinkActive="active">
+        🏠 Dashboard
+      </a>
+      <a routerLink="/register" routerLinkActive="active">
+        📄 Page One
+      </a>
+      <a routerLink="/page-two" routerLinkActive="active">
+        📊 Page Two
+      </a>
+    </nav>
+    
+  </aside>
+
+  <!-- Main Content -->
+  <main class="content">
+    <router-outlet></router-outlet>
+  </main>
+
+</div>

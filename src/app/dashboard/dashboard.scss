@@ -1,0 +1,45 @@
+.dashboard-container {
+  padding: 30px;
+}
+
+.welcome-card {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.welcome-card h2 {
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+
+.welcome-card p {
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Dashboard cards */
+.dash-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease;
+}
+
+.dash-card:hover {
+  transform: translateY(-4px);
+}
+
+.dash-card h5 {
+  font-size: 14px;
+  color: #666;
+}
+
+.dash-value {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+}

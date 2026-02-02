@@ -1,0 +1,48 @@
+<div class="auth-container">
+  <div class="auth-card">
+
+    <h4>Login</h4>
+
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin()">
+
+      <div class="mb-3">
+        <label>Email</label>
+        <input
+          type="email"
+          class="form-control"
+          formControlName="email"
+          placeholder="Enter email"
+        />
+      </div>
+
+      <div class="mb-3">
+        <label>Password</label>
+        <input
+          type="password"
+          class="form-control"
+          formControlName="password"
+          placeholder="Enter password"
+        />
+      </div>
+
+      <div *ngIf="errorMessage" class="alert alert-danger fade-message">
+        {{ errorMessage }}
+      </div>
+
+      <button
+        class="btn btn-primary w-100"
+        [disabled]="loading"
+      >
+        {{ loading ? 'Logging in...' : 'Login' }}
+      </button>
+
+    </form>
+
+    <!-- 🔁 Redirect to Register -->
+    <div class="auth-footer">
+      Don’t have an account?
+      <a routerLink="/register">Register</a>
+    </div>
+
+  </div>
+</div>
